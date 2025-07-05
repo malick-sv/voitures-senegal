@@ -2,34 +2,40 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
+  background-color: #f3f4f6;
   color: #333;
 }
 
 header {
-  background-color: #007bff;
+  background-color: #1e3a8a;
   color: white;
   padding: 20px;
   text-align: center;
 }
 
 nav a {
-  color: white;
   margin: 0 15px;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
 section {
-  padding: 40px 20px;
-  max-width: 900px;
+  padding: 30px;
+  max-width: 1000px;
   margin: auto;
 }
 
-.car {
-  background-color: white;
-  padding: 20px;
+h2 {
+  text-align: center;
   margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+.car {
+  background: white;
+  padding: 15px;
+  margin: 15px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   text-align: center;
@@ -37,75 +43,44 @@ section {
 
 .car img {
   width: 100%;
-  max-width: 200px;
-  border-radius: 8px;
+  max-width: 300px;
+  border-radius: 10px;
 }
 
 button {
-  background-color: #28a745;
-  border: none;
+  background-color: #1e3a8a;
   color: white;
+  border: none;
   padding: 10px 20px;
   margin-top: 10px;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
 button:hover {
-  background-color: #218838;
+  background-color: #3b82f6;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 500px;
+  margin: auto;
 }
 
 input, textarea {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-size: 16px;
 }
 
 footer {
-  background-color: #222;
+  background-color: #1e3a8a;
   color: white;
-  text-align: center;
-  padding: 20px;
-}
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #2e86de;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-nav a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-}
-
-section {
-  padding: 20px;
-}
-
-.car {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-bottom: 20px;
-}
-
-footer {
   text-align: center;
   padding: 10px;
-  background-color: #f1f1f1;
+  margin-top: 50px;
 }
