@@ -23,5 +23,21 @@ document.addEventListener("DOMContentLoaded", function () {
       showMessage("📞 Pour louer ce véhicule, appelez le 76 502 41 60.");
     });
   });
+});document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("modal");
+  const modalClose = document.getElementById("modal-close");
+
+  function openModal() {
+    modal.style.display = "flex";
+  }
+
+  modalClose.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  document.querySelectorAll("button.acheter, button.louer").forEach(button => {
+    button.addEventListener("click", openModal);
+  });
 });
+
 
