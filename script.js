@@ -1,25 +1,27 @@
-document.querySelectorAll("button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    alert("Merci pour votre intérêt ! Nous vous contacterons bientôt.");
-  });
-});
-// Script vide pour l'instant
-console.log("Bienvenue sur Voitures Sénégal !");
-// script.js
-
 document.addEventListener("DOMContentLoaded", function () {
-  const buyButtons = document.querySelectorAll("button.acheter");
-  const rentButtons = document.querySelectorAll("button.louer");
+  const modal = document.getElementById("modal");
+  const modalMessage = document.getElementById("modal-message");
+  const modalClose = document.getElementById("modal-close");
 
-  buyButtons.forEach(button => {
-    button.addEventListener("click", function () {
-      alert("Pour acheter ce véhicule, appelez le 76 502 41 60.");
+  function showMessage(text) {
+    modalMessage.textContent = text;
+    modal.style.display = "flex";
+  }
+
+  modalClose.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  document.querySelectorAll("button.acheter").forEach(button => {
+    button.addEventListener("click", () => {
+      showMessage("📞 Pour acheter ce véhicule, appelez le 76 502 41 60.");
     });
   });
 
-  rentButtons.forEach(button => {
-    button.addEventListener("click", function () {
-      alert("Pour louer ce véhicule, appelez le 76 502 41 60.");
+  document.querySelectorAll("button.louer").forEach(button => {
+    button.addEventListener("click", () => {
+      showMessage("📞 Pour louer ce véhicule, appelez le 76 502 41 60.");
     });
   });
 });
+
