@@ -7,46 +7,48 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header>
-    <h1>Voitures Sénégal</h1>
+    <div class="header-top">
+      <h1>Voitures Sénégal</h1>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg"
+           alt="Drapeau du Sénégal" class="flag">
+    </div>
+    <p class="slogan">Le Sénégal, pays de la Teranga 🇸🇳</p>
     <nav>
       <a href="#vente">Vente</a>
       <a href="#location">Location</a>
       <a href="#contact">Contact</a>
+      <a href="#apropos">À propos</a>
     </nav>
   </header>
 
   <section id="vente">
     <h2>Voitures à vendre</h2>
     <div class="cars-container">
+      <!-- voitures ici -->
       <div class="car">
-        <img src="https://cdn.motor1.com/images/mgl/jE9xZ/s3/2021-toyota-corolla.jpg" alt="Toyota Corolla" />
+        <img src="https://cdn.motor1.com/images/mgl/jE9xZ/s3/2021-toyota-corolla.jpg" alt="Toyota Corolla">
         <h3>Toyota Corolla</h3>
-        <p>3 500 000 FCFA</p>
+        <p>3 500 000 FCFA</p>
         <button>Acheter</button>
       </div>
       <div class="car">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hyundai_i10_2013%2C_front_25.06.14.jpg/640px-Hyundai_i10_2013%2C_front_25.06.14.jpg" alt="Hyundai i10" />
-        <h3>Hyundai i10</h3>
-        <p>4 200 000 FCFA</p>
-        <button>Acheter</button>
-      </div>
-      <div class="car">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Ford_Focus_III_2010.jpg" alt="Ford Focus" />
-        <h3>Ford Focus</h3>
-        <p>4 800 000 FCFA</p>
-        <button>Acheter</button>
-      </div>
-      <div class="car">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/2018_Honda_Civic_SR_VTEC_1.5_Front.jpg" alt="Honda Civic" />
-        <h3>Honda Civic</h3>
-        <p>5 200 000 FCFA</p>
-        <button>Acheter</button>
-      </div>
-      <div class="car">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Peugeot_208_2015_RHD_front_10.07.15.jpg" alt="Peugeot 208" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Peugeot_208_2015_RHD_front_10.07.15.jpg/800px-Peugeot_208_2015_RHD_front_10.07.15.jpg" alt="Peugeot 208">
         <h3>Peugeot 208</h3>
-        <p>3 800 000 FCFA</p>
+        <p>3 800 000 FCFA</p>
+        <button>Acheter</button>
+      </div>
+      <div class="car">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/2019_Renault_Clio_Business_Blue_dCi_85_1.5_Front.jpg/800px-2019_Renault_Clio_Business_Blue_dCi_85_1.5_Front.jpg" alt="Renault Clio">
+        <h3>Renault Clio</h3>
+        <p>2 800 000 FCFA</p>
+        <button>Acheter</button>
+      </div>
+      <div class="car">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/2018_Kia_Sportage_GT-Line_CRDi_ISG_4WD_1.6_Front.jpg/800px-2018_Kia_Sportage_GT-Line_CRDi_ISG_4WD_1.6_Front.jpg" alt="Kia Sportage">
+        <h3>Kia Sportage</h3>
+        <p>6 000 000 FCFA</p>
         <button>Acheter</button>
       </div>
     </div>
@@ -56,32 +58,36 @@
     <h2>Voitures à louer</h2>
     <div class="cars-container">
       <div class="car">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/2018_Hyundai_i10_front_4.16.18.jpg" alt="Hyundai i10" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/2018_Hyundai_i10_front_4.16.18.jpg" alt="Hyundai i10">
         <h3>Hyundai i10</h3>
-        <p>25 000 FCFA / jour</p>
+        <p>25 000 FCFA/jour</p>
         <button>Louer</button>
       </div>
       <div class="car">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Toyota_Camry_2018_front_4.16.18.jpg" alt="Toyota Camry" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Toyota_Camry_2018_front_4.16.18.jpg" alt="Toyota Camry">
         <h3>Toyota Camry</h3>
-        <p>45 000 FCFA / jour</p>
+        <p>45 000 FCFA/jour</p>
         <button>Louer</button>
       </div>
       <div class="car">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Nissan_Altima_2019.jpg" alt="Nissan Altima" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Nissan_Altima_2019.jpg" alt="Nissan Altima">
         <h3>Nissan Altima</h3>
-        <p>40 000 FCFA / jour</p>
+        <p>40 000 FCFA/jour</p>
         <button>Louer</button>
       </div>
     </div>
   </section>
 
+  <section id="apropos">
+    <h2>À propos</h2>
+    <p>🚗 Fondé par <strong>Malick Diop</strong>, Voitures Sénégal a pour mission de proposer des véhicules fiables à Dakar et partout au Sénégal.</p>
+    <p><em>Votre satisfaction, notre priorité.</em></p>
+    <p>📍 Adresse : Liberté 6, Dakar, Sénégal</p>
+  </section>
+
   <section id="contact">
     <h2>Contact</h2>
-    <p>Votre satisfaction est notre obsession.</p>
     <p>Téléphone : <a href="tel:+776504160">76 502 41 60</a></p>
-    <p>Adresse : Dakar, Sénégal</p>
-
     <form>
       <input type="text" placeholder="Nom" required />
       <input type="email" placeholder="Email" required />
@@ -91,7 +97,7 @@
   </section>
 
   <footer>
-    © 2025 Voitures Sénégal
+    © 2025 Voitures Sénégal — Fondé par Malick Diop
   </footer>
 
   <script src="script.js"></script>

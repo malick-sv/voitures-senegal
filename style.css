@@ -144,4 +144,23 @@ footer {
   margin-top: 40px;
 }
 
+}.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
+
+.flag {
+  height: 40px;
+}
+
+.slogan {
+  text-align: center;
+  font-style: italic;
+  color: green;
+  margin-bottom: 10px;
+}
+
+/* Voilà la fin du fichier précédent */
+
