@@ -162,5 +162,44 @@ footer {
   margin-bottom: 10px;
 }
 
-/* Voilà la fin du fichier précédent */
+/* Voilà la fin du fichier précédent *//* Boutons flottants */
+.whatsapp-button, .call-button {
+  position: fixed;
+  right: 15px;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.whatsapp-button {
+  bottom: 70px;
+  background-color: #25D366;
+}
+
+.call-button {
+  bottom: 20px;
+  background-color: #007bff;
+}
+
+/* Version mobile responsive */
+@media screen and (max-width: 768px) {
+  header nav a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .car {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .car img {
+    max-width: 90%;
+  }
+}
+
 
