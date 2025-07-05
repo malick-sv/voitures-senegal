@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Voitures Sénégal</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -17,30 +18,74 @@
 
   <section id="vente">
     <h2>Voitures à vendre</h2>
-    <div class="car">
-      <img src="https://via.placeholder.com/200" alt="Voiture 1">
-      <h3>Toyota Corolla</h3>
-      <p>3 500 000 FCFA</p>
-      <button>Acheter</button>
+    <div class="cars-container">
+      <div class="car">
+        <img src="https://cdn.motor1.com/images/mgl/jE9xZ/s3/2021-toyota-corolla.jpg" alt="Toyota Corolla" />
+        <h3>Toyota Corolla</h3>
+        <p>3 500 000 FCFA</p>
+        <button>Acheter</button>
+      </div>
+      <div class="car">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hyundai_i10_2013%2C_front_25.06.14.jpg/640px-Hyundai_i10_2013%2C_front_25.06.14.jpg" alt="Hyundai i10" />
+        <h3>Hyundai i10</h3>
+        <p>4 200 000 FCFA</p>
+        <button>Acheter</button>
+      </div>
+      <div class="car">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Ford_Focus_III_2010.jpg" alt="Ford Focus" />
+        <h3>Ford Focus</h3>
+        <p>4 800 000 FCFA</p>
+        <button>Acheter</button>
+      </div>
+      <div class="car">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/2018_Honda_Civic_SR_VTEC_1.5_Front.jpg" alt="Honda Civic" />
+        <h3>Honda Civic</h3>
+        <p>5 200 000 FCFA</p>
+        <button>Acheter</button>
+      </div>
+      <div class="car">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Peugeot_208_2015_RHD_front_10.07.15.jpg" alt="Peugeot 208" />
+        <h3>Peugeot 208</h3>
+        <p>3 800 000 FCFA</p>
+        <button>Acheter</button>
+      </div>
     </div>
   </section>
 
   <section id="location">
     <h2>Voitures à louer</h2>
-    <div class="car">
-      <img src="https://via.placeholder.com/200" alt="Voiture 2">
-      <h3>Hyundai i10</h3>
-      <p>25 000 FCFA / jour</p>
-      <button>Louer</button>
+    <div class="cars-container">
+      <div class="car">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/2018_Hyundai_i10_front_4.16.18.jpg" alt="Hyundai i10" />
+        <h3>Hyundai i10</h3>
+        <p>25 000 FCFA / jour</p>
+        <button>Louer</button>
+      </div>
+      <div class="car">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Toyota_Camry_2018_front_4.16.18.jpg" alt="Toyota Camry" />
+        <h3>Toyota Camry</h3>
+        <p>45 000 FCFA / jour</p>
+        <button>Louer</button>
+      </div>
+      <div class="car">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Nissan_Altima_2019.jpg" alt="Nissan Altima" />
+        <h3>Nissan Altima</h3>
+        <p>40 000 FCFA / jour</p>
+        <button>Louer</button>
+      </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
+    <p>Votre satisfaction est notre obsession.</p>
+    <p>Téléphone : <a href="tel:+776504160">76 502 41 60</a></p>
+    <p>Adresse : Dakar, Sénégal</p>
+
     <form>
-      <input type="text" placeholder="Nom">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
+      <input type="text" placeholder="Nom" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Message" required></textarea>
       <button type="submit">Envoyer</button>
     </form>
   </section>
@@ -48,121 +93,6 @@
   <footer>
     © 2025 Voitures Sénégal
   </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Voitures Sénégal</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Voitures Sénégal</h1>
-    <nav>
-      <a href="#vente">Vente</a>
-      <a href="#location">Location</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
- <section id="vente">
-  <h2>Voitures à vendre</h2>
-
-  <div class="car">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/2020_Toyota_Corolla_Icon_Tech_VVT-i_HEV_CVT_1.8_Front.jpg/800px-2020_Toyota_Corolla_Icon_Tech_VVT-i_HEV_CVT_1.8_Front.jpg" alt="Toyota Corolla">
-    <h3>Toyota Corolla</h3>
-    <p>3 500 000 FCFA</p>
-    <button>Acheter</button>
-  </div>
-
-  <div class="car">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Peugeot_208_2020.jpg/800px-Peugeot_208_2020.jpg" alt="Peugeot 208">
-    <h3>Peugeot 208</h3>
-    <p>3 200 000 FCFA</p>
-    <button>Acheter</button>
-  </div>
-
-  <div class="car">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/2019_Renault_Clio_Business_Blue_dCi_85_1.5_Front.jpg/800px-2019_Renault_Clio_Business_Blue_dCi_85_1.5_Front.jpg" alt="Renault Clio">
-    <h3>Renault Clio</h3>
-    <p>2 800 000 FCFA</p>
-    <button>Acheter</button>
-  </div>
-
-  <div class="car">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/2018_Kia_Sportage_GT-Line_CRDi_ISG_4WD_1.6_Front.jpg/800px-2018_Kia_Sportage_GT-Line_CRDi_ISG_4WD_1.6_Front.jpg" alt="Kia Sportage">
-    <h3>Kia Sportage</h3>
-    <p>6 000 000 FCFA</p>
-    <button>Acheter</button>
-  </div>
-</section>
-
-
-  <section id="location">
-  <h2>Voitures à louer</h2>
-
-  <div class="car">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/2020_Hyundai_i10_SE_MPI_1.0.jpg/800px-2020_Hyundai_i10_SE_MPI_1.0.jpg" alt="Hyundai i10">
-    <h3>Hyundai i10</h3>
-    <p>25 000 FCFA / jour</p>
-    <button>Louer</button>
-  </div>
-
-  <div class="car">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/2020_Dacia_Logan_Comfort_TCe_90.jpg/800px-2020_Dacia_Logan_Comfort_TCe_90.jpg" alt="Dacia Logan">
-    <h3>Dacia Logan</h3>
-    <p>22 000 FCFA / jour</p>
-    <button>Louer</button>
-  </div>
-
-  <div class="car">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/2018_Toyota_Yaris_Icon_VVT-i_1.5_Front.jpg/800px-2018_Toyota_Yaris_Icon_VVT-i_1.5_Front.jpg" alt="Toyota Yaris">
-    <h3>Toyota Yaris</h3>
-    <p>30 000 FCFA / jour</p>
-    <button>Louer</button>
-  </div>
-
-  <div class="car">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Suzuki_Celerio_2018.jpg/800px-Suzuki_Celerio_2018.jpg" alt="Suzuki Celerio">
-    <h3>Suzuki Celerio</h3>
-    <p>20 000 FCFA / jour</p>
-    <button>Louer</button>
-  </div>
-</section>
-
-
- <section id="contact">
-  <h2>Contact</h2>
-  <form>
-    <input type="text" placeholder="Nom">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Message"></textarea>
-    <button type="submit">Envoyer</button>
-  </form>
-
-  <p style="text-align:center; margin-top: 20px;">
-    📞 Vous pouvez aussi nous contacter par téléphone :  
-    <strong>76 502 41 60</strong>
-  </p>
-</section>
-
-  <footer>
-    © 2025 Voitures Sénégal
-  </footer><section id="apropos">
-  <h2>À propos</h2>
-  <p style="text-align: center; max-width: 700px; margin: auto; font-size: 18px;">
-    🚗 <strong>Voitures Sénégal</strong> vous accompagne dans l’achat et la location de véhicules sûrs, pratiques et à prix accessibles.  
-    <br><br>
-    <em>"Votre satisfaction, notre priorité."</em>
-    <br><br>
-    📍 Adresse : Liberté 6, Dakar, Sénégal  
-  </p>
-</section>
-
 
   <script src="script.js"></script>
 </body>
