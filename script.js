@@ -46,6 +46,12 @@ window.addEventListener("load", function () {
     splash.style.display = "none";
   }, 2500); // 2.5 secondes
 });
+window.addEventListener("load", function () {
+  const splash = document.getElementById("splash-screen");
+  setTimeout(() => {
+    splash.style.display = "none";
+  }, 3500); // durée totale avant disparition (3.5 sec)
+});
 
 
 
