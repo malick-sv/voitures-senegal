@@ -39,5 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", openModal);
   });
 });
+// Supprimer l'écran de chargement après l'animation
+window.addEventListener("load", function () {
+  const splash = document.getElementById("splash-screen");
+  setTimeout(() => {
+    splash.style.display = "none";
+  }, 2500); // 2.5 secondes
+});
+
 
 
