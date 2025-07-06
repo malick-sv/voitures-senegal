@@ -255,6 +255,13 @@
   </style>
 </head>
 <body>
+<!-- Modale -->
+<div id="modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:10000;">
+  <div style="background:white; padding:20px; border-radius:8px; max-width:300px; text-align:center; box-shadow: 0 0 15px rgba(0,0,0,0.3);">
+    <p id="modal-message" style="margin-bottom: 20px; font-size: 1.1rem;"></p>
+    <button id="modal-close" style="padding:8px 15px; font-weight:700; cursor:pointer;">Fermer</button>
+  </div>
+</div>
 
   <!-- SPLASH SCREEN -->
   <div id="splash-screen">
@@ -290,31 +297,36 @@
           <img src="https://cdn.motor1.com/images/mgl/jE9xZ/s3/2021-toyota-corolla.jpg" alt="Toyota Corolla" />
           <h3>Toyota Corolla</h3>
           <p>3 500 000 FCFA</p>
-          <button>Acheter</button>
+          <button class="acheter">Acheter</button>
+
         </div>
         <div class="car">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hyundai_i10_2013%2C_front_25.06.14.jpg/640px-Hyundai_i10_2013%2C_front_25.06.14.jpg" alt="Hyundai i10" />
           <h3>Hyundai i10</h3>
           <p>4 200 000 FCFA</p>
-          <button>Acheter</button>
+          <button class="acheter">Acheter</button>
+
         </div>
         <div class="car">
           <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Ford_Focus_III_2010.jpg" alt="Ford Focus" />
           <h3>Ford Focus</h3>
           <p>4 800 000 FCFA</p>
-          <button>Acheter</button>
+          <button class="acheter">Acheter</button>
+
         </div>
         <div class="car">
           <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/2018_Honda_Civic_SR_VTEC_1.5_Front.jpg" alt="Honda Civic" />
           <h3>Honda Civic</h3>
           <p>5 200 000 FCFA</p>
-          <button>Acheter</button>
+          <button class="acheter">Acheter</button>
+
         </div>
         <div class="car">
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Peugeot_208_2015_RHD_front_10.07.15.jpg" alt="Peugeot 208" />
           <h3>Peugeot 208</h3>
           <p>3 800 000 FCFA</p>
-          <button>Acheter</button>
+          <button class="acheter">Acheter</button>
+
         </div>
       </div>
     </section>
@@ -327,19 +339,22 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/2018_Hyundai_i10_front_4.16.18.jpg" alt="Hyundai i10" />
           <h3>Hyundai i10</h3>
           <p>25 000 FCFA / jour</p>
-          <button>Louer</button>
+          <button class="louer">Louer</button>
+
         </div>
         <div class="car">
           <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Toyota_Camry_2018_front_4.16.18.jpg" alt="Toyota Camry" />
           <h3>Toyota Camry</h3>
           <p>45 000 FCFA / jour</p>
-          <button>Louer</button>
+          <button class="louer">Louer</button>
+
         </div>
         <div class="car">
           <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Nissan_Altima_2019.jpg" alt="Nissan Altima" />
           <h3>Nissan Altima</h3>
           <p>40 000 FCFA / jour</p>
-          <button>Louer</button>
+          <button class="louer">Louer</button>
+
         </div>
       </div>
     </section>
