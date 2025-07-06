@@ -362,7 +362,7 @@
   </div>
 
   <script>
-    // Après 4 secondes on cache le splash et on affiche le contenu
+    // Splash screen
     window.addEventListener('load', () => {
       const splash = document.getElementById('splash-screen');
       const main = document.getElementById('main-content');
@@ -371,14 +371,30 @@
         setTimeout(() => {
           splash.style.display = 'none';
           main.style.display = 'block';
-          // Fade in du contenu
           setTimeout(() => {
             main.classList.add('visible');
           }, 50);
         }, 1000);
-      }, 4000); // 4 secondes de splash
+      }, 4000);
+    });
+
+    // Modale Acheter / Louer
+    document.querySelectorAll('.acheter, .louer').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const carName = e.target.closest('.car').querySelector('h3').textContent;
+        const action = e.target.classList.contains('acheter') ? 'acheter' : 'louer';
+        const modalMessage = document.getElementById('modal-message');
+        const modal = document.getElementById('modal');
+        
+        modalMessage.textContent = `Vous avez choisi de ${action} : ${carName}. Merci de contacter notre service client.`;
+        modal.style.display = 'flex';
+      });
+    });
+
+    // Fermer la modale
+    document.getElementById('modal-close').addEventListener('click', () => {
+      document.getElementById('modal').style.display = 'none';
     });
   </script>
-
 </body>
 </html>
