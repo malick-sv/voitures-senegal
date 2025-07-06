@@ -1,36 +1,24 @@
 /* Reset & base */
-body {/* Fond image Dakar */
 body {
-  background: url('images/dakar.jpg') no-repeat center center/cover fixed;
-}
-
-/* Ou : fond tricolore (Sénégal) */
-body {
-  background: linear-gradient(
-    to right,
-    #009639 0%,
-    #FFD100 33%,
-    #FFD100 66%,
-    #EF3340 100%
-  );
-}
-
-  body {
-  background: linear-gradient(
-    to right,
-    #009639 0%,
-    #FFD100 33%,
-    #FFD100 66%,
-    #EF3340 100%
-  );
-}
-
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f5f7fa;
-  color: #333;
   line-height: 1.6;
+  color: #333;
+
+  /* Choisis UN fond : image ou dégradé */
+  
+  /* Option 1 : Fond image Dakar */
+  /* background: url('images/dakar.jpg') no-repeat center center/cover fixed; */
+
+  /* Option 2 : Fond dégradé tricolore Sénégal */
+  background: linear-gradient(
+    to right,
+    #009639 0%,
+    #FFD100 33%,
+    #FFD100 66%,
+    #EF3340 100%
+  );
 }
 
 /* Section hero avec image et overlay */
@@ -91,6 +79,5 @@ h2 {
   text-align: center;
   margin-bottom: 30px;
   font-family: 'Montserrat', sans-serif;
-  font-weig
-
-
+  font-weight: 700;
+}
