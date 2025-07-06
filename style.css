@@ -81,3 +81,61 @@ h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
+/* Sections vente et location */
+#vente, #location {
+  background: white;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+/* Conteneur des voitures */
+.cars-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Chaque voiture */
+.cars-container .car {
+  width: 220px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* Animation hover (optionnel) */
+.cars-container .car:hover {
+  transform: translateY(-5px);
+}
+
+/* Image des voitures */
+.cars-container .car img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Boutons Achat / Location */
+.cars-container .car button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.cars-container .car button:hover {
+  background-color: #0056b3;
+}
