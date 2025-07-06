@@ -1,526 +1,15 @@
-body {body {
-  background-image: url('https://images.unsplash.com/photo-1511914264792-c49d4f0b4f61');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  font-family: Arial, sans-serif;
-  color: white;
-}
-main {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 10px;
-}
 
+* {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f9f9f9;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: #007BFF;
-  color: white;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.8em;
-}
-
-nav a {
-  color: white;
-  margin-left: 15px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-h2 {
-  text-align: center;
-  margin-top: 40px;
-  color: #007BFF;
-  font-weight: 700;
-}
-
-.cars-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.car {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.car:hover {
-  transform: translateY(-5px);
-}
-
-.car img {
-  max-width: 100%;
-  border-radius: 10px;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.car h3 {
-  margin: 10px 0 5px;
-  font-size: 1.2em;
-  color: #333;
-}
-
-.car p {
-  color: #666;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.car button {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.car button:hover {
-  background-color: #0056b3;
-}
-
-section#contact {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
-section#contact p {
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.1em;
-  margin-bottom: 8px;
-}
-
-form input, form textarea, form button {
-  display: block;
-  width: 100%;
-  margin-bottom: 12px;
-  padding: 10px;
-  font-size: 1em;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-family: inherit;
-}
-
-form textarea {
-  resize: vertical;
-  min-height: 80px;
-}
-
-form button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #1e7e34;
-}
-
-footer {
-  text-align: center;
-  padding: 15px 0;
-  background-color: #f1f1f1;
-  color: #555;
-  margin-top: 40px;
-}
-
-}.header-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.flag {
-  height: 40px;
-}
-
-.slogan {
-  text-align: center;
-  font-style: italic;
-  color: green;
-  margin-bottom: 10px;
-}
-
-/* Voilà la fin du fichier précédent *//* Boutons flottants */
-.whatsapp-button, .call-button {
-  position: fixed;
-  right: 15px;
-  padding: 10px 15px;
-  color: white;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-.whatsapp-button {
-  bottom: 70px;
-  background-color: #25D366;
-}
-
-.call-button {
-  bottom: 20px;
-  background-color: #007bff;
-}
-
-/* Version mobile responsive */
-@media screen and (max-width: 768px) {
-  header nav a {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .car {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .car img {
-    max-width: 90%;
-  }
-}/* Styles pour la fenêtre modale */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px 30px;
-  border-radius: 10px;
-  text-align: center;
-  max-width: 90%;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
-
-.modal-content p {
-  margin-bottom: 20px;
-  font-size: 1.1em;
-}
-
-#modal-close {
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-#modal-close:hover {
-  background: #0056b3;
-}
-.modal-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
-.modal-buttons .btn {
-  text-decoration: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-weight: bold;
-  color: white;
-  display: inline-block;
-  transition: background 0.3s ease;
-}
-
-.btn.call {
-  background-color: #007bff;
-}
-
-.btn.call:hover {
-  background-color: #0056b3;
-}
-
-.btn.whatsapp {
-  background-color: #25D366;
-}
-
-.btn.whatsapp:hover {
-  background-color: #128C7E;
-}
-
-#modal-close {
-  background-color: #ccc;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#modal-close:hover {
-  background-color: #aaa;
-}
-/* Splash screen styles */
-#splash-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  animation: fadeOut 1s ease 2s forwards;
-}
-
-.splash-content {
-  text-align: center;
-  animation: popIn 1.5s ease;
-}
-
-.splash-content img {
-  width: 100px;
-  margin-bottom: 20px;
-}
-
-@keyframes popIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-/* Splash screen styles */
-#splash-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  animation: fadeOut 1s ease 2s forwards;
-}
-
-.splash-content {
-  text-align: center;
-  animation: popIn 1.5s ease;
-}
-
-.splash-content img {
-  width: 100px;
-  margin-bottom: 20px;
-}
-
-@keyframes popIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}/* Splash screen design */
-#splash-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #006837, #fcd116, #ce1126);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 10000;
-  animation: fadeOut 1s ease 3s forwards;
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.splash-content {
-  text-align: center;
-  animation: fadeInUp 1.5s ease;
-}
-
-.splash-content img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 3px solid white;
-  margin-bottom: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-
-.splash-content h1 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-}
-
-.splash-content p {
-  font-style: italic;
-  font-size: 1rem;
-  opacity: 0.8;
-}
-
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-/* Splash avec diaporama automobile */
-#splash-screen {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-  color: white;
+body {
   font-family: 'Segoe UI', sans-serif;
-  overflow: hidden;
+  color: white;
+  background-color: #111;
 }
-
-.bg-slideshow {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  animation: slideshow 15s infinite;
-  filter: brightness(0.5);
-}
-
-@keyframes slideshow {
-  0% { background-image: url('https://cdn.motor1.com/images/mgl/jE9xZ/s3/2021-toyota-corolla.jpg'); }
-  20% { background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/68/Peugeot_208_2015_RHD_front_10.07.15.jpg'); }
-  40% { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/2019_Renault_Clio_Business_Blue_dCi_85_1.5_Front.jpg/800px-2019_Renault_Clio_Business_Blue_dCi_85_1.5_Front.jpg'); }
-  60% { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/2018_Kia_Sportage_GT-Line_CRDi_ISG_4WD_1.6_Front.jpg/800px-2018_Kia_Sportage_GT-Line_CRDi_ISG_4WD_1.6_Front.jpg'); }
-  80% { background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/2018_Hyundai_i10_front_4.16.18.jpg'); }
-  100% { background-image: url('https://cdn.motor1.com/images/mgl/jE9xZ/s3/2021-toyota-corolla.jpg'); }
-}
-
-.splash-content {
-  position: relative;
-  text-align: center;
-  animation: fadeInUp 1.5s ease;
-}
-
-.splash-content h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  letter-spacing: 2px;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-.splash-content p {
-  margin-top: 10px;
-  font-size: 1.1rem;
-  opacity: 0.9;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.5);
-}
-
-/* Animation texte */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Durée splash puis transition */
-@keyframes fadeOutSplash {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-/* Lance fadeOut après 5s */
-#splash-screen {
-  animation: fadeOutSplash 1s ease 5s forwards;
-}
-
-
-
 
 #hero {
   height: 100vh;
@@ -530,12 +19,86 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px;
+  padding: 40px;
   border-radius: 15px;
-  color: white;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+}
+
+main {
+  background-color: #222;
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
   text-align: center;
 }
+
+.car {
+  background-color: #333;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.car img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00a859;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007c43;
+}
+
+#contact {
+  text-align: center;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebd5d;
+}
+
