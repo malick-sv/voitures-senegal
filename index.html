@@ -1,400 +1,136 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Voitures Sénégal</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet"/>
   <style>
-    /* RESET */
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-    body, html {
-      height: 100%;
-      font-family: 'Roboto', sans-serif;
-      background: #f5f7fa;
-      color: #333;
-    }
+    /* Réinitialisation de base */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body, html { height:100%; font-family:'Roboto', sans-serif; color:#333; background:#f5f7fa; }
 
-    /* SPLASH SCREEN */
-    #splash-screen {
-      position: fixed;
-      inset: 0;
-      background: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      transition: opacity 1s ease;
+    /* HEADER FIXE */
+    header {
+      position:fixed; top:0; width:100%; background:white;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1); padding:10px 20px;
+      display:flex; align-items:center; justify-content:space-between; z-index:1000;
     }
+    header .brand { font-family:'Montserrat', sans-serif; font-size:1.5rem; color:#009639; font-weight:700; }
+    header nav a {
+      margin-left:20px; text-decoration:none; color:#007BFF;
+      font-weight:600; transition:color .3s;
+    }
+    header nav a:hover { color:#0056b3; }
 
-    /* Animation drapeau Sénégal (simplifié) */
-    .flag {
-      display: flex;
-      width: 180px;
-      height: 120px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-      animation: fadeInDown 1.5s ease forwards;
-    }
-    .flag > div {
-      flex: 1;
-      height: 100%;
-    }
-    .green { background: #009639; }
-    .yellow {
-      background: #FFD100;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .red { background: #EF3340; }
-
-    /* Etoile du drapeau */
-    .star {
-      width: 40px;
-      height: 40px;
-      clip-path: polygon(
-        50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
-        50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
-      );
-      background: #009639;
-      animation: pulseStar 2s infinite ease-in-out;
-    }
-
-    /* Animations splash */
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-
-    @keyframes pulseStar {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.2); opacity: 0.7; }
-    }
-
-    /* Voitures animées */
-    .cars-animation {
-      position: relative;
-      width: 100%;
-      height: 80px;
-      overflow: hidden;
-      margin-top: 20px;
-      animation: fadeInUp 1.5s ease forwards 1s;
-      display: flex;
-      gap: 40px;
-    }
-    .car {
-      width: 80px;
-      height: 40px;
-      background: #007BFF;
-      border-radius: 12px 12px 6px 6px;
-      position: relative;
-      animation: driveAcross 6s linear infinite;
-      box-shadow: 0 4px 10px rgba(0,123,255,0.5);
-    }
-    .car:nth-child(2) {
-      background: #28a745;
-      animation-delay: 3s;
-      height: 35px;
-    }
-    .car::before, .car::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 20px;
-      height: 20px;
-      background: #222;
-      border-radius: 50%;
-      box-shadow: inset -2px -2px 4px rgba(255,255,255,0.3);
-    }
-    .car::before {
-      left: 8px;
-    }
-    .car::after {
-      right: 8px;
-    }
-
-    @keyframes driveAcross {
-      0% {
-        transform: translateX(-100%);
-      }
-      100% {
-        transform: translateX(110vw);
-      }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-
-    /* CONTENU PRINCIPAL */
-    #main-content {
-      opacity: 0;
-      transition: opacity 1s ease 1s;
-    }
-    #main-content.visible {
-      opacity: 1;
-    }
-
-    /* Ton style déjà existant pour #hero etc... */
-
+    /* HERO */
     #hero {
-      position: relative;
-      background: url('https://cdn.pixabay.com/photo/2015/11/19/21/11/car-1050876_1280.jpg') no-repeat center center/cover;
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
+      margin-top:60px;
+      height:80vh; background:url('https://cdn.pixabay.com/photo/2015/11/19/21/11/car-1050876_1280.jpg') no-repeat center/cover;
+      position:relative; display:flex; align-items:center; justify-content:center;
+      text-align:center; color:white;
     }
     #hero::before {
-      content: '';
-      position: absolute;
-      top:0; left:0; right:0; bottom:0;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 1;
+      content:''; position:absolute; inset:0;
+      background:rgba(0,0,0,0.5);
     }
     #hero .overlay {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
+      position:relative; z-index:1; max-width:700px;
     }
-    #hero h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 3.5rem;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
+    #hero h1 { font-family:'Montserrat'; font-size:3.5rem; margin-bottom:10px; }
+    #hero p { font-size:1.25rem; margin-bottom:25px; }
+    #hero .btn-hero {
+      background:#009639; color:white; padding:15px 35px;
+      border-radius:30px; font-size:1.1rem; font-weight:700;
+      text-decoration:none; transition:background .3s;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2);
     }
-    #hero p {
-      font-size: 1.25rem;
-      margin-bottom: 15px;
-    }
-    #hero .btn-primary {
-      display: inline-block;
-      background: #007BFF;
-      color: white;
-      padding: 15px 40px;
-      font-size: 1.2rem;
-      border-radius: 50px;
-      font-weight: 700;
-      transition: background 0.3s ease;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,123,255,0.4);
-    }
-    #hero .btn-primary:hover {
-      background: #0056b3;
+    #hero .btn-hero:hover { background:#007a2f; }
+
+    /* STRUCTURE DES SECTIONS */
+    section { padding:60px 20px; max-width:1200px; margin:auto; }
+    section h2 {
+      font-family:'Montserrat'; font-size:2rem;
+      color:#009639; margin-bottom:30px; text-align:center;
     }
 
-    /* Styles voitures à vendre et louer */
-    #vente, #location {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto 40px auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    #vente h2, #location h2 {
-      margin-bottom: 20px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 2rem;
-      text-align: center;
-      color: #009639;
-    }
     .cars-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      display:flex; flex-wrap:wrap; justify-content:center; gap:25px;
     }
     .cars-container .car {
-      background: #f0f0f0;
-      border-radius: 12px;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
-      width: 180px;
-      padding: 15px;
-      text-align: center;
+      background:white; border-radius:10px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      width:220px; text-align:center; overflow:hidden;
+      transition:transform .3s;
     }
-    .cars-container .car img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
+    .cars-container .car:hover { transform:translateY(-5px); }
+    .car img {
+      width:100%; height:140px; object-fit:cover;
     }
-    .cars-container .car h3 {
-      margin-bottom: 8px;
-      font-weight: 700;
+    .car h3 { margin:15px 0 8px; font-size:1.2rem; }
+    .car p.price { color:#555; font-weight:600; margin-bottom:12px; }
+    .car a.btn {
+      display:block; margin:0 20px 20px; background:#007BFF;
+      color:white; padding:10px; border-radius:6px;
+      text-decoration:none; font-weight:600; transition:background .3s;
     }
-    .cars-container .car p {
-      margin-bottom: 10px;
-      color: #555;
-    }
-    .cars-container .car button {
-      background: #009639;
-      border: none;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .cars-container .car button:hover {
-      background: #007a2f;
+    .car a.btn:hover { background:#0056b3; }
+
+    footer {
+      background:#009639; color:white; padding:20px;
+      text-align:center; font-size:0.9rem;
     }
   </style>
 </head>
 <body>
-<!-- Modale -->
-<div id="modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:10000;">
-  <div style="background:white; padding:20px; border-radius:8px; max-width:300px; text-align:center; box-shadow: 0 0 15px rgba(0,0,0,0.3);">
-    <p id="modal-message" style="margin-bottom: 20px; font-size: 1.1rem;"></p>
-    <button id="modal-close" style="padding:8px 15px; font-weight:700; cursor:pointer;">Fermer</button>
-  </div>
-</div>
 
-  <!-- SPLASH SCREEN -->
-  <div id="splash-screen">
-    <div class="flag">
-      <div class="green"></div>
-      <div class="yellow">
-        <div class="star"></div>
-      </div>
-      <div class="red"></div>
+  <header>
+    <div class="brand">Voitures Sénégal</div>
+    <nav>
+      <a href="#vente">Vente</a>
+      <a href="#location">Location</a>
+      <a href="tel:765024160">Nous appeler</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="overlay">
+      <h1>Bienvenue chez Voitures Sénégal</h1>
+      <p>Votre satisfaction, notre priorité. Achetez ou louez facilement.</p>
+      <a href="tel:765024160" class="btn-hero">📞 Appelez-nous</a>
     </div>
-    <div class="cars-animation">
-      <div class="car"></div>
-      <div class="car"></div>
+  </section>
+
+  <section id="vente">
+    <h2>Voitures à vendre</h2>
+    <div class="cars-container">
+      <!-- Un exemple, ajoute tes voitures -->
+      <div class="car">
+        <img src="https://cdn.motor1.com/images/mgl/jE9xZ/s3/2021-toyota-corolla.jpg" alt="Toyota Corolla">
+        <h3>Toyota Corolla</h3>
+        <p class="price">3 500 000 FCFA</p>
+        <a href="tel:765024160" class="btn">Acheter</a>
+      </div>
+      <!-- Récopie ce bloc pour tes autres modèles -->
     </div>
-  </div>
+  </section>
 
-  <!-- CONTENU PRINCIPAL -->
-  <div id="main-content" style="display:none;">
-    <section id="hero">
-      <div class="overlay">
-        <h1>Voitures Sénégal</h1>
-        <p>🇸🇳 Votre satisfaction, notre objectif</p>
-        <p>Fondateur : Malick Diop</p>
-        <a href="#vente" class="btn-primary" aria-label="Voir les voitures à vendre">Voir les annonces</a>
+  <section id="location">
+    <h2>Voitures à louer</h2>
+    <div class="cars-container">
+      <div class="car">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/2018_Hyundai_i10_front_4.16.18.jpg" alt="Hyundai i10">
+        <h3>Hyundai i10</h3>
+        <p class="price">25 000 FCFA / jour</p>
+        <a href="tel:765024160" class="btn">Louer</a>
       </div>
-    </section>
+      <!-- Autres modèles -->
+    </div>
+  </section>
 
-    <!-- SECTION VOITURES A VENDRE -->
-    <section id="vente">
-      <h2>Voitures à vendre</h2>
-      <div class="cars-container">
-        <div class="car">
-          <img src="https://cdn.motor1.com/images/mgl/jE9xZ/s3/2021-toyota-corolla.jpg" alt="Toyota Corolla" />
-          <h3>Toyota Corolla</h3>
-          <p>3 500 000 FCFA</p>
-          <button class="acheter">Acheter</button>
+  <footer>
+    © 2025 Voitures Sénégal – Contact : 76 502 4160
+  </footer>
 
-        </div>
-        <div class="car">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hyundai_i10_2013%2C_front_25.06.14.jpg/640px-Hyundai_i10_2013%2C_front_25.06.14.jpg" alt="Hyundai i10" />
-          <h3>Hyundai i10</h3>
-          <p>4 200 000 FCFA</p>
-          <button class="acheter">Acheter</button>
-
-        </div>
-        <div class="car">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Ford_Focus_III_2010.jpg" alt="Ford Focus" />
-          <h3>Ford Focus</h3>
-          <p>4 800 000 FCFA</p>
-          <button class="acheter">Acheter</button>
-
-        </div>
-        <div class="car">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/2018_Honda_Civic_SR_VTEC_1.5_Front.jpg" alt="Honda Civic" />
-          <h3>Honda Civic</h3>
-          <p>5 200 000 FCFA</p>
-          <button class="acheter">Acheter</button>
-
-        </div>
-        <div class="car">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Peugeot_208_2015_RHD_front_10.07.15.jpg" alt="Peugeot 208" />
-          <h3>Peugeot 208</h3>
-          <p>3 800 000 FCFA</p>
-          <button class="acheter">Acheter</button>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION VOITURES A LOUER -->
-    <section id="location">
-      <h2>Voitures à louer</h2>
-      <div class="cars-container">
-        <div class="car">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/2018_Hyundai_i10_front_4.16.18.jpg" alt="Hyundai i10" />
-          <h3>Hyundai i10</h3>
-          <p>25 000 FCFA / jour</p>
-          <button class="louer">Louer</button>
-
-        </div>
-        <div class="car">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Toyota_Camry_2018_front_4.16.18.jpg" alt="Toyota Camry" />
-          <h3>Toyota Camry</h3>
-          <p>45 000 FCFA / jour</p>
-          <button class="louer">Louer</button>
-
-        </div>
-        <div class="car">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Nissan_Altima_2019.jpg" alt="Nissan Altima" />
-          <h3>Nissan Altima</h3>
-          <p>40 000 FCFA / jour</p>
-          <button class="louer">Louer</button>
-
-        </div>
-      </div>
-    </section>
-
-  </div>
-
-  <script>
-    // Splash screen
-    window.addEventListener('load', () => {
-      const splash = document.getElementById('splash-screen');
-      const main = document.getElementById('main-content');
-      setTimeout(() => {
-        splash.style.opacity = '0';
-        setTimeout(() => {
-          splash.style.display = 'none';
-          main.style.display = 'block';
-          setTimeout(() => {
-            main.classList.add('visible');
-          }, 50);
-        }, 1000);
-      }, 4000);
-    });
-
-    // Modale Acheter / Louer
-    document.querySelectorAll('.acheter, .louer').forEach(button => {
-      button.addEventListener('click', (e) => {
-        const carName = e.target.closest('.car').querySelector('h3').textContent;
-        const action = e.target.classList.contains('acheter') ? 'acheter' : 'louer';
-        const modalMessage = document.getElementById('modal-message');
-        const modal = document.getElementById('modal');
-        
-        modalMessage.textContent = `Vous avez choisi de ${action} : ${carName}. Merci de contacter notre service client.`;
-        modal.style.display = 'flex';
-      });
-    });
-
-    // Fermer la modale
-    document.getElementById('modal-close').addEventListener('click', () => {
-      document.getElementById('modal').style.display = 'none';
-    });
-  </script>
 </body>
 </html>
