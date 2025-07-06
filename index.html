@@ -7,60 +7,69 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Écran d'accueil avec fond image -->
   <section id="hero">
     <div class="overlay">
       <h1>Voitures Sénégal</h1>
-      <p>Votre satisfaction, notre objectif</p>
+      <p>🇸🇳 Votre satisfaction, notre objectif</p>
       <p>Fondateur : Malick Diop</p>
     </div>
   </section>
 
-  <!-- Tu peux remettre ici toutes les autres sections (vente, location, contact, etc.) -->
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voitures Sénégal</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <section id="hero">
-    <div class="overlay">
-      <h1>Voitures Sénégal</h1>
-      <p>Votre satisfaction, notre objectif</p>
-      <p>Fondateur : Malick Diop</p>
+  <!-- Voitures à vendre -->
+  <section id="vente" class="section">
+    <h2>Voitures à vendre</h2>
+    <div class="car">
+      <img src="https://cdn.pixabay.com/photo/2020/05/10/20/29/car-5153214_960_720.jpg" alt="Toyota Corolla">
+      <h3>Toyota Corolla</h3>
+      <p>3 500 000 FCFA</p>
+      <button onclick="showContact()">Acheter</button>
+    </div>
+    <div class="car">
+      <img src="https://cdn.pixabay.com/photo/2017/03/27/14/56/kia-2179687_960_720.jpg" alt="Kia Rio">
+      <h3>Kia Rio</h3>
+      <p>3 200 000 FCFA</p>
+      <button onclick="showContact()">Acheter</button>
     </div>
   </section>
 
-  <main>
-    <section id="vente">
-      <h2>Voitures à vendre</h2>
+  <!-- Voitures à louer -->
+  <section id="location" class="section">
+    <h2>Voitures à louer</h2>
+    <div class="car">
+      <img src="https://cdn.pixabay.com/photo/2016/02/17/21/17/auto-1209203_960_720.jpg" alt="Hyundai i10">
+      <h3>Hyundai i10</h3>
+      <p>25 000 FCFA / jour</p>
+      <button onclick="showContact()">Louer</button>
+    </div>
+    <div class="car">
+      <img src="https://cdn.pixabay.com/photo/2021/08/10/07/14/renault-6535329_960_720.jpg" alt="Renault Clio">
+      <h3>Renault Clio</h3>
+      <p>30 000 FCFA / jour</p>
+      <button onclick="showContact()">Louer</button>
+    </div>
+  </section>
 
-      <div class="car">
-        <img src="https://cdn.motor1.com/images/mgl/k6Z8b/s1/toyota-corolla.jpg" alt="Toyota Corolla">
-        <h3>Toyota Corolla</h3>
-        <p>3 500 000 FCFA</p>
-        <button onclick="alert('Appelez le 76 502 41 60 pour plus d’infos')">Acheter</button>
-      </div>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contactez-nous</h2>
+    <p>📞 76 502 41 60</p>
+    <div class="contact-buttons">
+      <a href="tel:+221765024160" class="btn">Appeler</a>
+      <a href="https://wa.me/221765024160" class="btn whatsapp" target="_blank">WhatsApp</a>
+    </div>
+  </section>
 
-      <div class="car">
-        <img src="https://cdn.motor1.com/images/mgl/0ANkE/s1/3.0.jpg" alt="Hyundai i10">
-        <h3>Hyundai i10</h3>
-        <p>25 000 FCFA / jour</p>
-        <button onclick="alert('Appelez le 76 502 41 60 pour plus d’infos')">Louer</button>
-      </div>
-    </section>
+  <footer>
+    <p>© 2025 Voitures Sénégal</p>
+  </footer>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>📞 76 502 41 60</p>
-      <a href="https://wa.me/221765024160" target="_blank" class="whatsapp-button">WhatsApp</a>
-    </section>
-  </main>
+  <script>
+    function showContact() {
+      alert("Appelez le 76 502 41 60 pour plus d'informations.");
+    }
+  </script>
 
 </body>
 </html>
