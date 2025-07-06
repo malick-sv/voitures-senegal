@@ -1,5 +1,30 @@
 /* Reset & base */
+body {/* Fond image Dakar */
 body {
+  background: url('images/dakar.jpg') no-repeat center center/cover fixed;
+}
+
+/* Ou : fond tricolore (Sénégal) */
+body {
+  background: linear-gradient(
+    to right,
+    #009639 0%,
+    #FFD100 33%,
+    #FFD100 66%,
+    #EF3340 100%
+  );
+}
+
+  body {
+  background: linear-gradient(
+    to right,
+    #009639 0%,
+    #FFD100 33%,
+    #FFD100 66%,
+    #EF3340 100%
+  );
+}
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
