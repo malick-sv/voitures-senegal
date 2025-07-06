@@ -2,13 +2,21 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Voitures Sénégal</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Écran d'accueil avec fond image -->
+  <!-- Splash Screen -->
+  <div id="splash-screen">
+    <div class="splash-content">
+      <h1>Voitures Sénégal</h1>
+      <p>🇸🇳 Votre satisfaction, notre objectif</p>
+    </div>
+  </div>
+
+  <!-- Écran d'accueil -->
   <section id="hero">
     <div class="overlay">
       <h1>Voitures Sénégal</h1>
@@ -21,16 +29,16 @@
   <section id="vente" class="section">
     <h2>Voitures à vendre</h2>
     <div class="car">
-      <img src="https://cdn.pixabay.com/photo/2020/05/10/20/29/car-5153214_960_720.jpg" alt="Toyota Corolla">
+      <img src="https://cdn.pixabay.com/photo/2020/05/10/20/29/car-5153214_960_720.jpg" alt="Toyota Corolla" />
       <h3>Toyota Corolla</h3>
       <p>3 500 000 FCFA</p>
-      <button onclick="showContact()">Acheter</button>
+      <button class="acheter">Acheter</button>
     </div>
     <div class="car">
-      <img src="https://cdn.pixabay.com/photo/2017/03/27/14/56/kia-2179687_960_720.jpg" alt="Kia Rio">
+      <img src="https://cdn.pixabay.com/photo/2017/03/27/14/56/kia-2179687_960_720.jpg" alt="Kia Rio" />
       <h3>Kia Rio</h3>
       <p>3 200 000 FCFA</p>
-      <button onclick="showContact()">Acheter</button>
+      <button class="acheter">Acheter</button>
     </div>
   </section>
 
@@ -38,16 +46,16 @@
   <section id="location" class="section">
     <h2>Voitures à louer</h2>
     <div class="car">
-      <img src="https://cdn.pixabay.com/photo/2016/02/17/21/17/auto-1209203_960_720.jpg" alt="Hyundai i10">
+      <img src="https://cdn.pixabay.com/photo/2016/02/17/21/17/auto-1209203_960_720.jpg" alt="Hyundai i10" />
       <h3>Hyundai i10</h3>
       <p>25 000 FCFA / jour</p>
-      <button onclick="showContact()">Louer</button>
+      <button class="louer">Louer</button>
     </div>
     <div class="car">
-      <img src="https://cdn.pixabay.com/photo/2021/08/10/07/14/renault-6535329_960_720.jpg" alt="Renault Clio">
+      <img src="https://cdn.pixabay.com/photo/2021/08/10/07/14/renault-6535329_960_720.jpg" alt="Renault Clio" />
       <h3>Renault Clio</h3>
       <p>30 000 FCFA / jour</p>
-      <button onclick="showContact()">Louer</button>
+      <button class="louer">Louer</button>
     </div>
   </section>
 
@@ -65,11 +73,15 @@
     <p>© 2025 Voitures Sénégal</p>
   </footer>
 
-  <script>
-    function showContact() {
-      alert("Appelez le 76 502 41 60 pour plus d'informations.");
-    }
-  </script>
+  <!-- Modal -->
+  <div id="modal" style="display:none;">
+    <div class="modal-content">
+      <span id="modal-close">&times;</span>
+      <p id="modal-message"></p>
+    </div>
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
+
