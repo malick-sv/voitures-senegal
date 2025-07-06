@@ -34,5 +34,30 @@ window.addEventListener("load", function () {
     }, 3000);
   }
 });
+// Dans script.js
+window.addEventListener('load', () => {
+  const splash = document.getElementById('splash-screen');
+  setTimeout(() => {
+    splash.style.display = 'none';
+  }, 2000); // 2 secondes
+});
+// script.js
+document.querySelectorAll('.acheter, .louer').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const carName = this.parentElement.querySelector('h3').innerText;
+    document.getElementById('modal-message').innerText = `Vous avez sélectionné ${carName}. Nous vous contacterons bientôt.`;
+    document.getElementById('modal').style.display = 'block';
+  });
+});
+
+document.getElementById('modal-close').addEventListener('click', function () {
+  document.getElementById('modal').style.display = 'none';
+});
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const splash = document.getElementById('splash-screen');
+    splash.style.display = 'none';
+  }, 4000); // Laisse l’animation jouer pendant 4 secondes
+});
 
 
