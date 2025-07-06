@@ -33,5 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
   }
 });
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const splash = document.getElementById('splash-screen');
+    splash.style.opacity = '0';
+    setTimeout(() => splash.style.display = 'none', 1000);
+  }, 4000);
+});
 
 
